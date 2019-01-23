@@ -16,10 +16,7 @@ var spawn = require('child_process').spawn,
  */
 
 
-module.exports = function(ifile, odir, cb){
-  var ofile = path.basename(ifile).split('.')[0] + '.pdf';
-
-  ofile = path.join(odir, ofile);
+module.exports = function(ifile, ofile, cb){
   tiff2pd2 = spawn('tiff2pdf', ['-o', ofile, ifile]);
 
   tiff2pd2.stdout.on('data', function (data) {
