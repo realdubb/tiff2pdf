@@ -5,7 +5,7 @@
 Coverts tiff images to pdfs utilizing [libtiff](http://www.remotesensing.org/libtiff/man/tiff2pdf.1.html)
 
 
-### `tiff2pdf(tiff, outDir)`
+### `tiff2pdf(tiff, outPath)`
 
 Converts tiff image into pdf document using tifflib (tiff2pdf).
 
@@ -14,13 +14,13 @@ Converts tiff image into pdf document using tifflib (tiff2pdf).
 | parameter | type   | description |
 | --------- | ------ | ----------- |
 | `tiff`   | string | input tiff image  |
-| `outDir`  | string | output directory   |
+| `outPath`  | string | output path   |
 
 
 ### Example
 
 ```js
-tiff2pdf('test.tiff', '/pdfs', function(result){
+tiff2pdf('test.tiff', 'c:/testing.pdf', function(result){
    console.log(result);
 });
 ```
